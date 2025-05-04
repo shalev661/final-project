@@ -1,5 +1,5 @@
-function isOffensive(message) {
-    const badWords = ["טיפש", "אידיוט", "מטומטם", "fuck"];
+function isOffensive(message ) {
+    const badWords = ["טיפש", "אידיוט", "מטומטם", "fuck", "fuckyou"];
     return badWords.some(word => message.includes(word));
   }
   
