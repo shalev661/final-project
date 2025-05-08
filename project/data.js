@@ -7,13 +7,15 @@ AddToPlayerBaseBtn.disabled = true;
 
 console.log(inputarea)
 
+let username;
+let password1;
 
 function Registration(){
 console.log("works im gonna enjoy a nice meal ")
-let username = inputarea.value
-let password1 = inputarea1.value
+username = inputarea.value
+password1 = inputarea1.value
 AddToPlayerBaseBtn.disabled = false;
-console.log(inputarea)
+console.log(username)
 }
 
 
@@ -23,15 +25,14 @@ cnfrmbtn.addEventListener("click", () => Registration());
 
 console.log
 
-//inputarea- שם משתמש
-//inputarea1 - סיסמה
+
 function AddToPlayerBase(username,password1){
 players.push( {id: IdUser, name: username, password: password1, reputation:10}     )
 console.log(players)
 
 }
 
-AddToPlayerBaseBtn.addEventListener("click", () => AddToPlayerBase());
+AddToPlayerBaseBtn.addEventListener("click", () => AddToPlayerBase(username,password1));
 
 
 
