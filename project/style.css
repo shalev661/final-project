@@ -42,4 +42,15 @@ body {
   .low-reputation {
     color: red;
   }
-  
+.footer{
+display: flex;
+justify-content: space-around;
+}
+.footercopyright{
+font-size: large;
+background-color: rgb(231, 224, 233);
+}
+.footercopyrighth1{
+display: flex;
+  justify-content: center;
+}
