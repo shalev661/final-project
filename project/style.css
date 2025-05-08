@@ -40,4 +40,24 @@ body {
   .low-reputation {
     color: red;
   }
+  #pre1{
+    font-size: xx-large;
+  }
+  #pre2{
+    font-size: xx-large;
+  }
+  #about{
+    position: relative;
+    right: 677px;
+    font-size: xx-large;
+  }
+  #playbutton{
+    position: relative;
+    right: 588px;
+    width: 300px;
+    height: 70px;
+    font-size: x-large;
+    font-weight: bold;
+    background: #5c9fd9
+}
   
