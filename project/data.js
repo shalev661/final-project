@@ -1,9 +1,48 @@
-// מידע על שחקנים (לשימוש ראשוני)
+let inputarea = document.getElementById("inputarea");
+let inputarea1 = document.getElementById("inputarea1");
+let cnfrmbtn = document.getElementById("cnfrmbtn");
+
+let AddToPlayerBaseBtn = document.getElementById("AddToPlayerBase");
+AddToPlayerBaseBtn.disabled = true;
+
+console.log(inputarea)
+
+
+function Registration(){
+console.log("works im gonna enjoy a nice meal ")
+let username = inputarea.value
+let password1 = inputarea1.value
+AddToPlayerBaseBtn.disabled = false;
+console.log(inputarea)
+}
+
+
+
+cnfrmbtn.addEventListener("click", () => Registration());
+
+
+console.log
+
+//inputarea- שם משתמש
+//inputarea1 - סיסמה
+function AddToPlayerBase(username,password1){
+players.push( {id: IdUser, name: username, password: password1, reputation:10}     )
+console.log(players)
+
+}
+
+AddToPlayerBaseBtn.addEventListener("click", () => AddToPlayerBase());
+
+
+
+
+
 const players = [
-    { id: 1, name: "שחקן1", reputation: 5 },
-    { id: 2, name: "שחקן2", reputation: 5 },
-    { id: 3, name: "שחקן3", reputation: 5 }
-  ];
-  
-  // ניתן להרחיב את זה בהמשך
-  
+    { id: 1, name: "שחקן1", password: "password1", reputation: 10 },
+    { id: 2, name: "שחקן2", password: "password2", reputation: 10 },
+    { id: 3, name: "שחקן3", password: "password3", reputation: 10 },
+    
+];
+
+let IdUser = players.length+1
+console.log(IdUser)
