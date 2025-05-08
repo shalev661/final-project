@@ -5,5 +5,5 @@ const players = [
     { id: 3, name: "שחקן3", reputation: 5 }
   ];
   
-  // ניתן להרחיב את זה בהמשך
+
   
