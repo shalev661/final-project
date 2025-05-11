@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< Updated upstream
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,3 +10,104 @@
     <h1>player's profile here</h1>
 </body>
 </html>
+=======
+<html lang="he">
+    <link rel="stylesheet" href="profile.css" />
+<head>
+  <meta charset="UTF-8">
+  <title>פרופיל שחקן</title>
+  <style>
+    body {
+      font-family: Arial;
+      direction: rtl;
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+    input, select, textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+    }
+    .profile-box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-top: 20px;
+      background-color:blue;
+    }
+  </style>
+</head>
+<body class="fashion">
+
+  <h1>בניית פרופיל שחקן</h1>
+
+  <form id="playerForm">
+    <label>שם במשחק:</label>
+    <input type="text" id="inGameName" required>
+
+    <label>שם המשחק:</label>
+    <input type="text" id="game" required>
+
+    <label>דרגה :</label>
+    <input type="text" id="rank">
+
+    <label>תפקיד:</label>
+    <input type="text" id="role">
+
+    <label>דמויות / נשקים מועדפים:</label>
+    <input type="text" id="mains">
+
+    <label>חוזקות:</label>
+    <textarea id="strengths"></textarea>
+
+    <label>חולשות:</label>
+    <textarea id="weaknesses"></textarea>
+
+    <label>מטרות:</label>
+    <textarea id="goals"></textarea>
+    
+    <label>מוניטין</label>
+    <textarea id="particular"></textarea>
+
+    <button type="submit">צור פרופיל</button>
+  </form>
+
+  <div id="profile" class="profile-box" style="display:none;"></div>
+
+  <script>
+    document.getElementById("playerForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("inGameName").value;
+      const game = document.getElementById("game").value;
+      const rank = document.getElementById("rank").value;
+      const role = document.getElementById("role").value;
+      const mains = document.getElementById("mains").value;
+      const strengths = document.getElementById("strengths").value;
+      const weaknesses = document.getElementById("weaknesses").value;
+      const goals = document.getElementById("goals").value;
+      const particular = document.getElementById("particular").value;
+
+    //   const profileHTML = `
+    //     <h2>${name} - ${game}</h2>
+    //     <p><strong>דרגה:</strong> ${rank}</p>
+    //     <p><strong>תפקיד:</strong> ${role}</p>
+    //     <p><strong>מיין:</strong> ${mains}</p>
+    //     <p><strong>חוזקות:</strong> ${strengths}</p>
+    //     <p><strong>חולשות:</strong> ${weaknesses}</p>
+    //     <p><strong>מטרות:</strong> ${goals}</p>
+      `;
+
+      const profileDiv = document.getElementById("profile");
+      profileDiv.innerHTML = profileHTML;
+      profileDiv.style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+>>>>>>> Stashed changes
