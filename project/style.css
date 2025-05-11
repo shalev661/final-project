@@ -1,43 +1,19 @@
-body {
-    font-family: Arial, sans-serif;
-    direction: rtl;
-    background-color: #f0f0f0;
-    padding: 20px;
+
+ 
+
+  .header{
+    display: flex
+    ;
+        justify-content: space-between;
+        align-items: center;
+        background-color:rgb(221, 246, 252);
   }
-  .container {
-    max-width: 700px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
+  .title{
+    padding-right: 42px;
+    color: rgb(122, 213, 249);
   }
-  #chat {
-    margin-top: 20px;
-  }
-  #messages {
-    height: 200px;
-    overflow-y: auto;
-    background: #eee;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  .message {
-    padding: 5px;
-    border-bottom: 1px solid #ccc;
-  }
-  .report-btn {
-    background: red;
-    color: white;
-    border: none;
-    padding: 3px 6px;
-    cursor: pointer;
-    float: left;
-    margin-left: 10px;
-  }
-  .player {
-    margin-bottom: 10px;
-  }
-  .low-reputation {
-    color: red;
-  }
-  
+
+.nav{
+  padding-left: 42px;
+  color: rgb(122, 12, 0);
+}
