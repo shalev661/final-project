@@ -4,11 +4,20 @@ let cnfrmbtn = document.getElementById("cnfrmbtn");
 
 let AddToPlayerBaseBtn = document.getElementById("AddToPlayerBase");
 AddToPlayerBaseBtn.disabled = true;
+let IdUser = players.length+1
+console.log(IdUser)
 
 console.log(inputarea)
 
 let username;
 let password1;
+
+const players = [
+    { id: 1, name: "שחקן1", password: "password1", reputation: 10 },
+    { id: 2, name: "שחקן2", password: "password2", reputation: 10 },
+    { id: 3, name: "שחקן3", password: "password3", reputation: 10 },
+    
+];
 
 function Registration(){
 console.log("works im gonna enjoy a nice meal ")
@@ -38,12 +47,7 @@ AddToPlayerBaseBtn.addEventListener("click", () => AddToPlayerBase(username,pass
 
 
 
-const players = [
-    { id: 1, name: "שחקן1", password: "password1", reputation: 10 },
-    { id: 2, name: "שחקן2", password: "password2", reputation: 10 },
-    { id: 3, name: "שחקן3", password: "password3", reputation: 10 },
-    
-];
 
-let IdUser = players.length+1
-console.log(IdUser)
+
+
+
