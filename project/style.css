@@ -13,6 +13,8 @@ body {
   }
   #chat {
     margin-top: 20px;
+    width: 285px;
+    height: 93px;
   }
   #messages {
     height: 200px;
@@ -40,5 +42,4 @@ body {
   .low-reputation {
     color: red;
   }
-  
-  
+
