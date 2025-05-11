@@ -50,6 +50,15 @@ AddToPlayerBaseBtn.addEventListener("click", () => AddToPlayerBase(username,pass
 
 
 
+if(inputarea1>=6){
+
+alert("password should be at least 6 characters")
+
+}
+
+
+
+
 
 
 
