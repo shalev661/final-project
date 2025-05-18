@@ -8,6 +8,9 @@ let inputarea = document.getElementById("inputarea");
 let inputarea1 = document.getElementById("inputarea1");
 let cnfrmbtn = document.getElementById("cnfrmbtn");
 
+
+
+
 let AddToPlayerBaseBtn = document.getElementById("AddToPlayerBase");
 AddToPlayerBaseBtn.disabled = true;
 
@@ -28,9 +31,7 @@ cnfrmbtn.addEventListener("click", () => Registration());
 
 function AddToPlayerBase(username, password1) {
     players.push({ id: IdUser, name: username, password: password1, reputation: 10 });
-    console.log(players);
-   
-    console.log(players[4])
+
 }
 
 AddToPlayerBaseBtn.addEventListener("click", () => AddToPlayerBase(username, password1));
