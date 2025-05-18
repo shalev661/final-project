@@ -26,16 +26,26 @@ body {
   .message {
     padding: 5px;
     border-bottom: 1px solid #ccc;
+
   }
-  .report-btn {
-    background: red;
-    color: white;
-    border: none;
-    padding: 3px 6px;
-    cursor: pointer;
-    float: left;
-    margin-left: 10px;
+
+  .header{
+    display: flex
+    ;
+        justify-content: space-between;
+        align-items: center;
+        background-color:rgb(221, 246, 252);
   }
+  .title{
+    padding-right: 42px;
+    color: rgb(122, 213, 249);
+  }
+
+.nav{
+  padding-left: 42px;
+  color: rgb(122, 12, 0);
+}
+
   .player {
     margin-bottom: 10px;
   }
