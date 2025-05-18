@@ -49,3 +49,4 @@ function sendMessage() {
 sendBtn.addEventListener("click", sendMessage);
 
 renderPlayers();
+
