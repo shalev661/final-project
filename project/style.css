@@ -51,6 +51,35 @@ body {
   color: rgb(122, 12, 0);
 }
 
+#pre1 {
+  background-color: #fff;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   margin-bottom: 20px;
+   white-space: pre-wrap;
+   line-height: 1.6;
+   box-sizing: border-box;
+   font-size: 22px;
+   font-family: unset;
+   left: 8px;
+
+
+   
+}
+
+#playbutton, #info {
+  display: inline-block;
+  background-color: #03a9f4; 
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+left:8px;
+}
+
   .player {
     margin-bottom: 10px;
   }
