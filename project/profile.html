@@ -32,7 +32,7 @@
 
   <form id="playerForm">
     <label>שם במשחק:</label>
-    <input type="text" id="inGameName" required>
+    <p  id="inGameName" >
 
     <label>שם המשחק:</label>
     <input type="text" id="game" required>
@@ -62,12 +62,13 @@
   </form>
 
   <div id="profile" class="profile-box" style="display:none;"></div>
-
+  <script src="data.js"></script>
   <script>
     document.getElementById("playerForm").addEventListener("submit", function(event) {
       event.preventDefault();
 
-      const name = document.getElementById("inGameName").value;
+      const name = document.getElementById("inGameName");
+      name.innerHTML = players[1].name;
       const game = document.getElementById("game").value;
       const rank = document.getElementById("rank").value;
       const role = document.getElementById("role").value;
