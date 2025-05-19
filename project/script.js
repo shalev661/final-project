@@ -34,10 +34,12 @@ function sendMessage() {
   reportBtn.addEventListener("click", () => {
     if (isOffensive(text)) {
       alert("תגובה פוגענית! מורידים מוניטין לשחקן.");
+            window.location.href = 'report.html';
       currentPlayer.reputation--;
       renderPlayers();
     } else {
       alert("התגובה לא פוגענית לפי הבדיקה.");
+            window.location.href = 'report.html';
     }
   });
 
