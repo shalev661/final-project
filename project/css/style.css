@@ -57,3 +57,13 @@ body {
   .low-reputation {
     color: red;
   }
+.GameBox{
+    width: 1052px;
+    height: 500px;
+    margin-right: 213px;
+    border: 3px solid black;
+    margin-top: -88px;
+    background-color: gray;
+}
+
+  
