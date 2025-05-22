@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/project/css/style.css" />
     <title>Document</title>
+    
 </head>
 <body>
+    <header class="header">
+        <h1 class="title">שם המשחק</h1>
+      <nav id="main-nav"> </nav>
+    </header>
     <h1>game here</h1>
      <!-- צ'אט -->
      <div id="chat">
@@ -14,9 +19,13 @@
         <input type="text" id="chatInput" placeholder="הקלד הודעה..." />
         <button id="sendBtn">שלח</button>
       </div>
-<a href="/project/report.html"></a>
-      <script src="data.js"></script>
-      <script src="gptMock.js"></script>
-      <script src="script.js"></script>
+      <div class="GameBox">
+        <canvas id="myCanvas" width="1052" height="500"></canvas>
+      </div>
+
+
+      <script src="/project/js/data.js"></script>
+      <script src="/project/js/gptMock.js"></script>
+      <script src="/project/js/script.js"></script>
 </body>
 </html>
