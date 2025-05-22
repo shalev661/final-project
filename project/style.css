@@ -1,0 +1,22 @@
+.GameBox {
+  width: 1052px;
+  background-color: gray;
+  border: black 3px solid;
+  margin-left: 300px;
+
+}
+
+.healthbar-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 0 20px; /* add spacing from canvas border if needed */
+}
+
+.healthbar {
+  width: 500px;
+  height: 30px;
+  border: black 2px solid;
+  background-color: green;
+
+}

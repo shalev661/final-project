@@ -12,16 +12,21 @@
         <h1 class="title">שם המשחק</h1>
       <nav id="main-nav"> </nav>
     </header>
-    <h1>game here</h1>
      <!-- צ'אט -->
      <div id="chat">
         <div id="messages" ></div>
         <input type="text" id="chatInput" placeholder="הקלד הודעה..." />
         <button id="sendBtn">שלח</button>
       </div>
-      <div class="GameBox">
-        <canvas id="myCanvas" width="1052" height="500"></canvas>
-      </div>
+      <!-- health bars-->
+<div class="GameBox">
+  <div class="healthbar-container">
+    <div class="healthbar" id="p1Health"></div>
+    <div class="healthbar" id="p2Health"></div>
+  </div>
+  <canvas id="myCanvas" width="1052" height="500"></canvas>
+</div>
+
 
 
       <script src="data.js"></script>
