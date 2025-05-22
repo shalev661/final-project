@@ -1,0 +1,16 @@
+   .title{
+display: flex;
+justify-content: center;
+
+   }
+   body{
+      direction: rtl;
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+ input{
+      width: 100%;
+      padding: 8px;
+    }
+
