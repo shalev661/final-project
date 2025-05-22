@@ -10,7 +10,9 @@ color: beige;
         justify-content: space-between;
         align-items: first baseline;
         background-color: rgb(72, 77, 146);
-        height: 203px;
+        height: 203px
+        
+        
   }
   .title{
     position: relative;
@@ -26,6 +28,9 @@ color: beige;
   color: rgb(42, 145, 150);
 }
 
+.label{
+    
+}
 
 
 
