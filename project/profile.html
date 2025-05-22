@@ -11,8 +11,6 @@
     
       font-family: Arial;
       direction: rtl;
-      max-width: 600px;
-      margin: auto;
       padding: 20px;
     }
     input, select, textarea {
@@ -38,33 +36,36 @@
 </header>
 
 <script src="nav.js"></script>
-  <h1>בניית פרופיל שחקן</h1>
+  <h1> פרופיל שחקן</h1>
 
   <form id="playerForm">
-    <label>שם שחקן:</label>
+    <label>שם משתמש:</label>
+    <p  id="inGameName" >
+
+   
+
+    <label>דרגה :</label>
     
-    <p type="text" id="inGameName" required>
+
+
 
     <label>תפקיד:</label>
-    <p type="text" id="role">
+    <input type="text" id="role">
 
-    <label>דמויות:</label>
-    <p type="text" id="mains">
+    <label>דמויות / נשקים מועדפים:</label>
+    <input type="text" id="mains">
 
-      <label>נתוני משחק:</label>
-    <p type="text" id="code">
-      
+    <label>חוזקות:</label>
+    <textarea id="strengths"></textarea>
 
-      <label>קוד:</label>
-    <p type="text" id="code">
+    <label>חולשות:</label>
+    <textarea id="weaknesses"></textarea>
 
-    <label>נשקים מועדפים:</label>
-    <p type="text" id="mains">
-
+    <label>מטרות:</label>
+    <textarea id="goals"></textarea>
+    
     <label>מוניטין</label>
     <textarea id="particular"></textarea>
-
-
 
     <button type="submit">צור פרופיל</button>
   </form>
