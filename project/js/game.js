@@ -36,21 +36,21 @@ let winner = "";
 document.addEventListener("keydown", move);
 
 function move(event) {
-  if (gameOver) return; // Prevent any movement or shooting after game is over
+  if (gameOver) return;
 
   switch (event.key.toLowerCase()) {
     // player 1
     case "w":
-      p1y -= speed;
+      p1y = Math.max(0, p1y - speed);
       break;
     case "s":
-      p1y += speed;
+      p1y = Math.min(canvas.height - bodyHeight, p1y + speed);
       break;
     case "a":
-      p1x -= speed;
+      p1x = Math.max(0, p1x - speed);
       break;
     case "d":
-      p1x += speed;
+      p1x = Math.min(canvas.width - bodyWidth, p1x + speed);
       break;
     case "g":
       if (p1BulletX === null) {
@@ -61,16 +61,16 @@ function move(event) {
 
     // player 2
     case "arrowup":
-      p2y -= speed;
+      p2y = Math.max(0, p2y - speed);
       break;
     case "arrowdown":
-      p2y += speed;
+      p2y = Math.min(canvas.height - bodyHeight, p2y + speed);
       break;
     case "arrowleft":
-      p2x -= speed;
+      p2x = Math.max(0, p2x - speed);
       break;
     case "arrowright":
-      p2x += speed;
+      p2x = Math.min(canvas.width - bodyWidth, p2x + speed);
       break;
     case "l":
       if (p2BulletX === null) {
