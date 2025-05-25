@@ -88,7 +88,6 @@ a{
    font-family: unset;
    left: 8px;
 
-
    
 }
 
@@ -141,5 +140,8 @@ left:8px;
   background-color: green;
 }
 
-
-  
+.buttondiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
