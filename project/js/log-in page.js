@@ -1,17 +1,18 @@
-let timesclicked = 0;
+let timesClicked = 0;
 
 function toggleLogin() {
   const overlay = document.getElementById("overlay");
   overlay.classList.toggle("hidden");
 }
 
-function login() {
-        event.preventDefault();
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-  const message = document.getElementById("message");
+function login(event) {
+  event.preventDefault();
+
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
   const captcha = document.getElementById("captcha");
   const captchaContainer = document.getElementById("captcha-container");
+  const message = document.getElementById("message");
 
   const correctUsername = "sigma";
   const correctPassword = "123";
@@ -22,16 +23,17 @@ function login() {
   }
 
   if (username === correctUsername && password === correctPassword) {
+    message.style.color = "green";
     message.textContent = "Login successful!";
     setTimeout(() => {
-      window.location.href = "index.html";
+      window.location.href = ".//index.html"; // redirect to main page
     }, 1000);
   } else {
-    timesclicked++;
+    timesClicked++;
+    message.style.color = "#d9534f";
     message.textContent = "Invalid username or password.";
-    if (timesclicked >= 2) {
+    if (timesClicked >= 2) {
       captchaContainer.style.display = "block";
     }
   }
 }
-
