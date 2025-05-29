@@ -24,15 +24,14 @@ let p1BulletY = null;
 let p2BulletX = null;
 let p2BulletY = null;
 
-// Huge bullet flag for Player 1
-let p1HugeBullet = false;
-
 // Health
 let p1Health = 100;
 let p2Health = 100;
 
+
 let gameOver = false;
 let winner = "";
+
 
 document.addEventListener("keydown", move);
 
@@ -57,16 +56,9 @@ function move(event) {
       if (p1BulletX === null) {
         p1BulletX = p1x + bodyWidth;
         p1BulletY = p1y + bodyHeight / 2 - bulletHeight / 2;
-        p1HugeBullet = false;
       }
       break;
-    case "h":
-      if (p1BulletX === null) {
-        p1BulletX = p1x + bodyWidth;
-        p1BulletY = p1y + bodyHeight / 2 - bulletHeight / 2;
-        p1HugeBullet = true;
-      }
-      break;
+      
 
     // player 2
     case "arrowup":
@@ -110,9 +102,7 @@ function draw() {
   // Bullets
   if (p1BulletX !== null) {
     ctx.fillStyle = "green";
-    // Changed here: huge bullet is 5 times wider than normal bullet
-    const size = p1HugeBullet ? bulletSize * 5 : bulletSize;
-    ctx.fillRect(p1BulletX, p1BulletY, size, bulletHeight);
+    ctx.fillRect(p1BulletX, p1BulletY, bulletSize, bulletHeight);
   }
   if (p2BulletX !== null) {
     ctx.fillStyle = "blue";
@@ -129,19 +119,16 @@ function draw() {
 
 function updateBullets() {
   if (p1BulletX !== null) {
-    // Changed here: collision width matches 5 times bullet size when huge
-    const p1CurrentBulletSize = p1HugeBullet ? bulletSize * 5 : bulletSize;
     p1BulletX += bulletSpeed;
 
     if (
-      p1BulletX + p1CurrentBulletSize >= p2x &&
+      p1BulletX + bulletSize >= p2x &&
       p1BulletX <= p2x + bodyWidth &&
       p1BulletY >= p2y &&
       p1BulletY <= p2y + bodyHeight
     ) {
       p2Health = Math.max(0, p2Health - 10);
       p1BulletX = null;
-      p1HugeBullet = false;
 
       if (p2Health === 0 && !gameOver) {
         gameOver = true;
@@ -149,7 +136,6 @@ function updateBullets() {
       }
     } else if (p1BulletX > canvas.width) {
       p1BulletX = null;
-      p1HugeBullet = false;
     }
   }
 
@@ -175,6 +161,9 @@ function updateBullets() {
   }
 }
 
+
+
+
 function showWinner() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -185,6 +174,14 @@ function showWinner() {
   ctx.fillText(`${winner} has won!`, canvas.width / 2, canvas.height / 2);
 }
 
+
+
+
+
+
+
+
+
 function gameLoop() {
   if (!gameOver) {
     updateBullets();
@@ -194,5 +191,6 @@ function gameLoop() {
     showWinner(); // display the win message
   }
 }
+
 
 gameLoop();
