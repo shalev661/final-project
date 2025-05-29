@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         nav.innerHTML = `
           <a href="index.html">בית</a>
           <a href="game.html"> 🎮המשחק</a>
-          <a href="log-in page.html">התחברות</a>
+          <a onclick="toggleLogin()">התחברות</a>
           <a href="Sign-Up_Page.html">הרשמה</a>
         `;
       }
