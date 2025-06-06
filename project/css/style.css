@@ -56,7 +56,8 @@ a{
   padding-left: 42px;
     position: relative;
     top: 6px;
-  color: rgb(42, 145, 150);
+  color: rgb(42, 145, 150); 
+
 }
 
 #pre1 {
@@ -95,8 +96,8 @@ left:8px;
   }
 
 .GameBox{
-    width: 1052px;
-    height: 500px;
+    width: 1072px;
+    height: 545px;
     margin-right: 213px;
     border: 3px solid black;
     margin-top: -88px;
@@ -114,7 +115,7 @@ left:8px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  padding: 0 20px; /* add spacing from canvas border if needed */
+  padding:0 20px; /* add spacing from canvas border if needed */
 }
 
 .healthbar {
@@ -128,4 +129,16 @@ left:8px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  
+}
+.buttonmasage{
+
+  margin-top: 285px; /* מזיז את האלמנט למטה */
+padding: 1px;
+
+
+
+
+
+  
 }

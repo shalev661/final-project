@@ -112,12 +112,16 @@ pre {
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 3rem; 
   font-weight: bold;
   text-decoration: none;
   color: white;
-      position: relative;
-    left: 13px;
+      /* position: relative; */
+    /* left: 13px;  */
+     margin-right: auto;
+  margin-left: 400px;
+
+
 }
 
 .navbar-nav {
@@ -140,19 +144,32 @@ pre {
   color: white;
   padding: 10px 0;
   transition: color 0.3s ease;
+  
 }
+nav .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem; /* רווח בין הפריטים */
+  align-items: center;
+   font-weight: bold;
+}
+
 
 .nav-link:hover {
   color: #f0f0f0;
 }
 
 .nav-link.active {
-  font-weight: bold;
+ font-weight: bold;
+   gap: 3rem;
+  padding: 10px 0;
+  
 }
 
 .navbar-buttons {
   display: flex;
   align-items: center;
+ 
 }
 
 .button {
