@@ -14,19 +14,24 @@ function login(event) {
   const captchaContainer = document.getElementById("captcha-container");
   const message = document.getElementById("message");
 
-  const correctUsername = "sigma";
-  const correctPassword = "123";
+  const players = JSON.parse(localStorage.getItem("players")) || [];
 
   if (captchaContainer.style.display === "block" && !captcha.checked) {
     message.textContent = "Please confirm you are not a robot.";
     return;
   }
 
-  if (username === correctUsername && password === correctPassword) {
+  const userFound = players.some(player => 
+    player.name === username && player.password === password
+  );
+
+  if (userFound) {
     message.style.color = "green";
     message.textContent = "Login successful!";
+    localStorage.setItem("loggedIn", "true");
+    localStorage.setItem("currentUser", username);
     setTimeout(() => {
-      window.location.href = ".//index.html"; // redirect to main page
+      window.location.href = "./index.html";
     }, 1000);
   } else {
     timesClicked++;
