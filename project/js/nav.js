@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
       } else {
         nav.innerHTML = `
-       <a href="index.html">בית</a>
+       <a href="#">בית</a>
        <a href="/project/game.html">🎮המשחק</a>
        <a href="/project/about.html">אודות</a>
        <a href="/project/Log-in_Page.html">התחברות</a>
