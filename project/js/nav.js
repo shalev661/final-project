@@ -12,13 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
       } else {
         nav.innerHTML = `
-          <a href="#">בית</a>
-          <a href="./game.html"> 🎮המשחק</a>
-          <a href="./project/about.html">אודות</a>
-          <a href="./project/log-in page.html">התחברות</a>
-          <a href="./project/Sign-Up_Page.html">הרשמה</a>
-          <a href="./project/Contactandhelp.html">צור קשר</a>
-
+       <a href="index.html">בית</a>
+       <a href="/project/game.html">🎮המשחק</a>
+       <a href="/project/about.html">אודות</a>
+       <a href="/project/Log-in_Page.html">התחברות</a>
+       <a href="/project/Sign-Up_Page.html">הרשמה</a>
+       <a href="/project/Contactandhelp.html">צור קשר</a>
         `;
       }
     }
