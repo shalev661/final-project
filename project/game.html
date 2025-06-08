@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/Game+Chat.css" />
   <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/nav.css">
+       <link rel="stylesheet" href="./game.js">
   <title>Document</title>
 
 </head>
@@ -15,15 +16,22 @@
 <body>
   
   <header class="header">
+     <h1 class="title">VerbaGuard<nav id="main-nav"> </nav></h1>
+    
     <h1 class="title">Player 1:שחקו אחד wasd לזוז g-כדור h-מכה מיוחדת</h1>
     <h1>Player 2: ← ↑ → ↓ לזוז L:כדור K:מכה מיוחדת</h1>
-        <h1 class="title">VerbaGuard<nav id="main-nav"> </nav></h1>
-    
+       
    
   </header>
   <!-- צ'אט -->
   <div id="chat">
     <div id="messages"></div>
+        <!-- בחירת שחקן -->
+  <select id="playerSelect">
+    <option value="Player 1">שחקן 1</option>
+    <option value="Player 2">שחקן 2</option>
+  </select>
+
     <input class="buttonmasage" type="text" id="chatInput" placeholder="הקלד הודעה..." />
     <button class="buttonmasage" id="sendBtn">שלח</button>
   </div>
@@ -44,16 +52,13 @@
   <script src="./js/script.js"></script>
   <script src="./js/game.js"></script>
 
-  
 
 
  
       </div>
   </div>
 </body>
-<style>
 
-</style>
 
 
 </html>
