@@ -5,18 +5,18 @@ const playersDiv = document.getElementById("players");
 
 let currentPlayer = players[0]; // ברירת מחדל
 
-function renderPlayers() {
-  playersDiv.innerHTML = '';
-  players.forEach(player => {
-    const div = document.createElement('div');
-    div.classList.add('player');
-    if (player.reputation < 3) {
-      div.classList.add('low-reputation');
-    }
-    div.innerText = `${player.name} - מוניטין: ${player.reputation}`;
-    playersDiv.appendChild(div);
-  });
-}
+// function renderPlayers() {
+//   playersDiv.innerHTML = '';
+//   players.forEach(player => {
+//     const div = document.createElement('div');
+//     div.classList.add('player');
+//     if (player.reputation < 3) {
+//       div.classList.add('low-reputation');
+//     }
+//     div.innerText = `${player.name} - מוניטין: ${player.reputation}`;
+//     playersDiv.appendChild(div);
+//   });
+// }
 
 function sendMessage() {
   const text = chatInput.value.trim();
@@ -48,7 +48,7 @@ function sendMessage() {
   messagesDiv.scrollTop = messagesDiv.scrollHeight;
 }
 
-sendBtn.addEventListener("click", sendMessage);
+// sendBtn.addEventListener("click", sendMessage);
 
-renderPlayers();
+// renderPlayers();
 
