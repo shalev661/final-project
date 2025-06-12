@@ -88,15 +88,17 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease, opacity 0.3s ease;
-  opacity: 1; /* Full brightness by default */
-/* }
+  opacity: 1;
+}
 
 #AddToPlayerBase:disabled {
-  opacity: 0.5; /* Dim when disabled */
-  /* cursor: not-allowed;
-/* } */ 
+  opacity: 0.5; 
+  cursor: not-allowed;
+} */
 
-/* Basic body styling for a clean background and centering */
+
+
+ /* Basic body styling for a clean background and centering */
 body {
     font-family: Arial, sans-serif; /* A clean, readable font */
     background-color: #f0f2f5; /* Light grey background */
