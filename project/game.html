@@ -2,65 +2,66 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <base href="./">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="./" />
   <link rel="stylesheet" href="./css/Game+Chat.css" />
-    <link rel="stylesheet" href="./css/nav.css">
-       <link rel="stylesheet" href="./game.js">
+  <link rel="stylesheet" href="./css/nav.css" />
   <title>Document</title>
-
 </head>
 
 <body>
-  
+
   <header class="header">
-     <h1 class="title">VerbaGuard<nav id="main-nav"> </nav></h1>
-    
-    <h1 class="title">Player 1:שחקו אחד wasd לזוז g-כדור h-מכה מיוחדת</h1>
-    <h1>Player 2: ← ↑ → ↓ לזוז L:כדור K:מכה מיוחדת</h1>
-       
-   
+    <nav id="main-nav"></nav>
   </header>
-  <!-- צ'אט -->
+
+  <!-- Chat -->
   <div id="chat">
     <div id="messages"></div>
-        <!-- בחירת שחקן -->
-  <select id="playerSelect">
-    <option value="Player 1">שחקן 1</option>
-    <option value="Player 2">שחקן 2</option>
-  </select>
+
+    <!-- Player Selection -->
+    <select id="playerSelect">
+      <option value="Player 1">שחקן 1</option>
+      <option value="Player 2">שחקן 2</option>
+    </select>
 
     <input class="buttonmasage" type="text" id="chatInput" placeholder="הקלד הודעה..." />
     <button class="buttonmasage" id="sendBtn">שלח</button>
   </div>
-    </div>
-  <!-- health bars-->
+
+  <!-- Game Area -->
   <div class="GameBox">
     <div class="healthbar-container">
       <div class="healthbar" id="p1Health"></div>
       <div class="healthbar" id="p2Health"></div>
     </div>
-    <canvas id="myCanvas" width="1052" height="500"></canvas>
-  </div>
 
+    <!-- Canvas and Moves Button Side by Side -->
+    <div class="canvas-wrapper">
+      <canvas id="myCanvas" width="1052" height="500"></canvas>
 
+      <div class="moves-panel">
+        <button id="toggleMovesBtn">Show Moves</button>
 
-
-
-
- 
+        <!-- Moves Box (hidden by default) -->
+        <div class="movesBox" id="movesBox" style="display: none;">
+          <h1 class="title">Player 1: WASD | G: כדור | H: מכה מיוחדת</h1>
+          <h1>Player 2: ← ↑ → ↓ | L: כדור | K: מכה מיוחדת</h1>
+        </div>
       </div>
+    </div>
   </div>
-    <script src="./js/nav.js"></script>
+
+  <!-- Scripts -->
+  <script src="./js/nav.js"></script>
   <script src="./js/data.js"></script>
   <script src="./js/gptMock.js"></script>
   <script src="./js/script.js"></script>
   <script src="./js/game.js"></script>
-  
-  <script src="./project/js/header.js"></script>
+
+
+
 </body>
-
-
 
 </html>

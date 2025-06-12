@@ -1,14 +1,14 @@
 
 let players = JSON.parse(localStorage.getItem("players")) || [
-  { id: 1, name: "שחקן1", password: "password1", reputation: 10 },
-  { id: 2, name: "שחקן2", password: "password2", reputation: 10 },
+  { id: 1, name: "שחקן1", password: "password1", reputation: 1 },
+  { id: 2, name: "שחקן2", password: "password2", reputation: 4 },
   { id: 3, name: "שחקן3", password: "password3", reputation: 10 },
 ];
 
 let inputarea = document.getElementById("inputarea");
 let inputarea1 = document.getElementById("inputarea1");
 let cnfrmbtn = document.getElementById("cnfrmbtn");
-let AddToPlayerBaseBtn = document.getElementById("AddToPlayerBase");
+let AddToPlayerBaseBtn = document.getElementById("AddToPlayerBaseBtn");
 
 AddToPlayerBaseBtn.disabled = true;
 

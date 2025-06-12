@@ -4,7 +4,7 @@ const sendBtn = document.getElementById("sendBtn");
 const playersDiv = document.getElementById("players");
 
 let currentPlayer = players[0]; // ברירת מחדל
-console.log(currentPlayer)
+
 // function renderPlayers() {
 //   playersDiv.innerHTML = '';
 //   players.forEach(player => {
