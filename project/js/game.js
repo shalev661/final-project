@@ -19,7 +19,7 @@ let p1BulletX = null, p1BulletY = null;
 let p2BulletX = null, p2BulletY = null;
 
 // Health
-let p1Health = 100, p2Health = 100;
+let p1Health = 100, p2Health = 100;   
 
 // Game status
 let gameOver = false;
@@ -232,3 +232,44 @@ function gameLoop() {
 }
 
 gameLoop();
+
+
+js
+Copy
+Edit
+document.addEventListener("DOMContentLoaded", () => {
+  const chatInput = document.getElementById("chatInput");
+  const sendBtn = document.getElementById("sendBtn");
+  const messages = document.getElementById("messages");
+  const playerSelect = document.getElementById("playerSelect");
+
+  function sendMessage() {
+    const message = chatInput.value.trim();
+    const player = playerSelect.value;
+
+    if (message !== "") {
+      const messageElement = document.createElement("div");
+      messageElement.textContent = `${player}: ${message}`;
+      messageElement.style.padding = "5px";
+      messageElement.style.borderBottom = "1px solid #ccc";
+
+      // אפשר לעצב לפי שחקן
+      if (player === "Player 1") {
+        messageElement.style.color = "blue";
+      } else {
+        messageElement.style.color = "green";
+      }
+
+      messages.appendChild(messageElement);
+      messages.scrollTop = messages.scrollHeight; // גלילה אוטומטית
+      chatInput.value = "";
+    }
+  }
+
+  sendBtn.addEventListener("click", sendMessage);
+  chatInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      sendMessage();
+    }
+  });
+});

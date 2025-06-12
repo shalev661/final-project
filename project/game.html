@@ -6,24 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="./">
   <link rel="stylesheet" href="./css/Game+Chat.css" />
-  <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/nav.css">
+       <link rel="stylesheet" href="./game.js">
   <title>Document</title>
 
 </head>
 
 <body>
+  
   <header class="header">
+     <h1 class="title">VerbaGuard<nav id="main-nav"> </nav></h1>
+    
     <h1 class="title">Player 1:שחקו אחד wasd לזוז g-כדור h-מכה מיוחדת</h1>
     <h1>Player 2: ← ↑ → ↓ לזוז L:כדור K:מכה מיוחדת</h1>
-    <nav id="main-nav"> </nav>
+       
+   
   </header>
   <!-- צ'אט -->
   <div id="chat">
     <div id="messages"></div>
-    <input type="text" id="chatInput" placeholder="הקלד הודעה..." />
-    <button id="sendBtn">שלח</button>
+        <!-- בחירת שחקן -->
+  <select id="playerSelect">
+    <option value="Player 1">שחקן 1</option>
+    <option value="Player 2">שחקן 2</option>
+  </select>
+
+    <input class="buttonmasage" type="text" id="chatInput" placeholder="הקלד הודעה..." />
+    <button class="buttonmasage" id="sendBtn">שלח</button>
   </div>
+    </div>
   <!-- health bars-->
   <div class="GameBox">
     <div class="healthbar-container">
@@ -34,11 +45,22 @@
   </div>
 
 
-  <script src="./js/nav.js"></script>
+
+
+
+
+ 
+      </div>
+  </div>
+    <script src="./js/nav.js"></script>
   <script src="./js/data.js"></script>
   <script src="./js/gptMock.js"></script>
   <script src="./js/script.js"></script>
   <script src="./js/game.js"></script>
+  
+  <script src="./project/js/header.js"></script>
 </body>
+
+
 
 </html>
