@@ -16,7 +16,7 @@ function header(){
             nav.innerHTML = `
               <a href="./index.html">בית</a>
               <a href="./project/game.html">🎮המשחק</a>
-              <a href="./project/profile.html">פרופיל שחקן</a>
+              <a href="project/profile.html">פרופיל שחקן</a>
               <a href="#" onclick="logoutUser()">התנתק</a>
             `;
           } else {
