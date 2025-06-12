@@ -19,7 +19,7 @@ let p1BulletX = null, p1BulletY = null;
 let p2BulletX = null, p2BulletY = null;
 
 // Health
-let p1Health = 100, p2Health = 100;
+let p1Health = 100, p2Health = 100;   
 
 // Game status
 let gameOver = false;

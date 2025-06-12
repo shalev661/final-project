@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <link rel="stylesheet" href="./project/css/style.css">
+   <link rel="stylesheet" href="./project/css/log-in page.css">
+   <link rel="stylesheet" href="./project/css/nav.css">
    <base href="./">
   <title>משחק עם צ'אט</title>
-  <link rel="stylesheet" href="./project/css/style.css" />
-  <link rel="stylesheet" href="./project/css/nav.css">
+  
 </head>
 <body>
 
@@ -26,6 +28,32 @@
 
 <br><br><br>
 
+
+  <div id="overlay" class="hidden">
+    <div class="SignBox">
+      <h2>Login</h2>
+      <form onsubmit="login(event)">
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="password" id="password" placeholder="Password" required />
+        
+        <div id="captcha-container">
+          <label class="terms-label">
+            <input type="checkbox" id="captcha" />
+            I am not a robot
+          </label>
+        </div>
+
+        <button id="AddToPlayerBaseLI" type="submit">Login</button>
+        <div id="message"></div>
+      </form>
+
+      <button id="cnfrmbtnLI" onclick="window.location.href='./Sign-Up_Page.html'">
+        Don't have an account? Sign up
+      </button>
+    </div>
+  </div>
+
+
 <footer class="footercopyright">
 <footer class="footer">
 <a href="#">home page</a>
@@ -42,5 +70,7 @@
   <script src="./project/js/gptMock.js"></script>
   <script src="./project/js/script.js"></script>
   <script src="./project/js/header.js"></script>
+  <script src="./project/js/log-in page.js"></script>
+
 </body>
 </html>

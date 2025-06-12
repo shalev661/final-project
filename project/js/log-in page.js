@@ -1,37 +1,44 @@
-let timesclicked = 0;
+let timesClicked = 0;
 
 function toggleLogin() {
   const overlay = document.getElementById("overlay");
   overlay.classList.toggle("hidden");
 }
 
-function login() {
-        event.preventDefault();
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-  const message = document.getElementById("message");
+function login(event) {
+  event.preventDefault();
+
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
   const captcha = document.getElementById("captcha");
   const captchaContainer = document.getElementById("captcha-container");
+  const message = document.getElementById("message");
 
-  const correctUsername = "sigma";
-  const correctPassword = "123";
+  const players = JSON.parse(localStorage.getItem("players")) || [];
 
   if (captchaContainer.style.display === "block" && !captcha.checked) {
     message.textContent = "Please confirm you are not a robot.";
     return;
   }
 
-  if (username === correctUsername && password === correctPassword) {
+  const userFound = players.some(player => 
+    player.name === username && player.password === password
+  );
+
+  if (userFound) {
+    message.style.color = "green";
     message.textContent = "Login successful!";
+    localStorage.setItem("loggedIn", "true");
+    localStorage.setItem("currentUser", username);
     setTimeout(() => {
-      window.location.href = "index.html";
+      window.location.href = "./index.html";
     }, 1000);
   } else {
-    timesclicked++;
+    timesClicked++;
+    message.style.color = "#d9534f";
     message.textContent = "Invalid username or password.";
-    if (timesclicked >= 2) {
+    if (timesClicked >= 2) {
       captchaContainer.style.display = "block";
     }
   }
 }
-

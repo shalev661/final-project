@@ -79,7 +79,7 @@
   text-decoration: underline;
 }
 
-#AddToPlayerBase {
+#AddToPlayerBaseLI {
   background-color: #28a745;
   color: white;
   border: none;
@@ -91,16 +91,16 @@
   opacity: 1;
 }
 
-#AddToPlayerBase:hover {
+#AddToPlayerBaseLI:hover {
   background-color: #218838;
 }
 
-#AddToPlayerBase:disabled {
+/* #AddToPlayerBase:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-}
+} */
 
-#cnfrmbtn {
+#cnfrmbtnLI {
   background-color: transparent;
   border: none;
   color: #333;
@@ -109,7 +109,7 @@
   margin-top: 15px;
 }
 
-#cnfrmbtn:hover {
+#cnfrmbtnLI:hover {
   text-decoration: underline;
 }
 
