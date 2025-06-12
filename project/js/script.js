@@ -48,6 +48,8 @@ function sendMessage() {
   messagesDiv.scrollTop = messagesDiv.scrollHeight;
 }
 
+
+
 // sendBtn.addEventListener("click", sendMessage);
 
 // renderPlayers();
