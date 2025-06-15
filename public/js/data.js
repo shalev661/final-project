@@ -101,3 +101,6 @@ function login(event) {
   }
 }
 
+const example =JSON.parse( localStorage.getItem("UserInfo"));
+
+console.log(example)
