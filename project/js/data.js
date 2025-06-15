@@ -53,3 +53,8 @@ function AddToPlayerBase(username, password1) {
 }
 
 AddToPlayerBaseBtn.addEventListener("click", () => AddToPlayerBase(username, password1));
+
+
+const example =JSON.parse( localStorage.getItem("UserInfo"));
+
+console.log(example)
