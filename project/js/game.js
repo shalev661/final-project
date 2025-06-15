@@ -6,8 +6,8 @@ let p1BodyWidth = 100, p1BodyHeight = 100;
 let p2BodyWidth = 100, p2BodyHeight = 100;
 const speed = 75;
 
-let p1x = 50, p1y = 400;
-let p2x = 750, p2y = 400;
+let p1x = 50, p1y = 200;
+let p2x = 750, p2y = 200;
 
 let bulletSize = 20;
 let p1BulletHeight = 10;
@@ -62,8 +62,8 @@ if (players[0].reputation >= 9) {
 } else { // reputation 0 or 1
   p1Health = 20;
   powerCooldown = 10000;
-  p1BodyHeight = 200;
-  p1BodyWidth = 200;
+  p1BodyHeight = 900;
+  p1BodyWidth = 900;
 }
 
 // Player 2 restriction 
