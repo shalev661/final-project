@@ -73,3 +73,6 @@
     #cnfrmbtn {
     display: none;
   }
+  .report-btn{
+    background-color: red;
+  }
