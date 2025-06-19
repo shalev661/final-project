@@ -1,7 +1,8 @@
-const messagesDiv = document.getElementById("messages");
+const messagesDiv = document.getElementById("messagesDiv");
 const chatInput = document.getElementById("chatInput");
 const sendBtn = document.getElementById("sendBtn");
 const playersDiv = document.getElementById("players");
+sendBtn.addEventListener("click", sendMessage)
 
 let currentPlayer = players[0]; // ברירת מחדל
 
@@ -53,3 +54,42 @@ function sendMessage() {
 // sendBtn.addEventListener("click", sendMessage);
 
 // renderPlayers();
+
+
+
+
+
+
+
+//sign up js
+
+
+
+
+
+
+
+
+
+//log in js
+
+
+
+
+
+
+
+
+
+
+
+
+//header js
+
+  
+
+
+
+
+
+//nav bar js

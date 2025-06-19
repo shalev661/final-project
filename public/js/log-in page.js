@@ -45,3 +45,4 @@ localStorage.setItem("currentUser", JSON.stringify(userFound));
     }
   }
 }
+
