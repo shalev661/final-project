@@ -143,3 +143,10 @@ padding: 1px;
   border: 1px solid #ccc;
   margin-bottom: 10px;
 }
+#headerplace{
+    display: flex;
+        justify-content: space-between;
+        align-items: first baseline;
+        background-color: rgb(72, 77, 146);
+        height: 145px;
+}
