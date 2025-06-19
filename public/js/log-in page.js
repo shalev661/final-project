@@ -21,7 +21,7 @@ function login(event) {
     return;
   }
 
-  const userFound = players.find(player => 
+  const userFound = players.some(player => 
     player.name === username && player.password === password
   );
 
@@ -30,7 +30,7 @@ function login(event) {
     message.textContent = "Login successful!";
     localStorage.setItem("CurrentlyloggedIn", JSON.stringify(userFound));
     localStorage.setItem("loggedIn", "true");
-localStorage.setItem("currentUser", JSON.stringify(userFound));
+    localStorage.setItem("currentUser", JSON.stringify(userFound));
 
     localStorage.setItem("currentUser", username);
     setTimeout(() => {

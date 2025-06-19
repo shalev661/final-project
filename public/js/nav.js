@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function logoutUser() {
   localStorage.setItem("loggedIn", "false");
   localStorage.removeItem("currentUser");
-  localStorage.removeItem("CurrentloggedIn")
+  localStorage.removeItem("CurrentlyloggedIn")
   window.location.href = "./project/game.html";
 }
 
