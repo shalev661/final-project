@@ -43,36 +43,7 @@
     <h1 class="footercopyrighth1">© כל הזכויות שמורות לסטארטאפיסטים שנה א'</h1>
   </footer>
 
-  <script>
-    document.getElementById("playerForm").addEventListener("submit", function (event) {
-      event.preventDefault();
 
-      const name = document.getElementById("inGameName");
-      name.innerHTML = players[1].name;
-      const game = document.getElementById("game").value;
-      const rank = document.getElementById("rank").value;
-      const role = document.getElementById("role").value;
-      const mains = document.getElementById("mains").value;
-      const strengths = document.getElementById("strengths").value;
-      const weaknesses = document.getElementById("weaknesses").value;
-      const goals = document.getElementById("goals").value;
-      const particular = document.getElementById("particular").value;
-
-      const profileHTML = `
-        <h2>${name} - ${game}</h2>
-        <p><strong>דרגה:</strong> ${rank}</p>
-        <p><strong>תפקיד:</strong> ${role}</p>
-        <p><strong>מיין:</strong> ${mains}</p>
-        <p><strong>חוזקות:</strong> ${strengths}</p>
-        <p><strong>חולשות:</strong> ${weaknesses}</p>
-        <p><strong>מטרות:</strong> ${goals}</p>
-      `;
-
-      const profileDiv = document.getElementById("profile");
-      profileDiv.innerHTML = profileHTML;
-      profileDiv.style.display = "block";
-    });
-  </script>
   <!-- <script src="/project/js/header.js"></script> -->
  <script src="/public/js/nav.js"></script>
       <script src="/public/js/data.js"></script>
