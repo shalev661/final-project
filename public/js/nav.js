@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const loggedIn = localStorage.getItem("loggedIn");
   
     if (nav) {
+
       if (loggedIn === "true") {
         nav.innerHTML = `
           <a href="#">בית</a>
@@ -18,9 +19,15 @@ document.addEventListener("DOMContentLoaded", () => {
           <a href="./project/log-in page.html">התחברות</a>
           <a href="./project/Sign-Up_Page.html">הרשמה</a>
           <a href="./project/Contactandhelp.html">צור קשר</a>
-
         `;
       }
     }
-  });
-  
+});
+
+function logoutUser() {
+  localStorage.setItem("loggedIn", "false");
+  localStorage.removeItem("currentUser");
+  localStorage.removeItem("CurrentlyloggedIn")
+  window.location.href = "./project/game.html";
+}
+
