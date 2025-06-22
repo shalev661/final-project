@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Default profile info using your existing variables
   let defaultProfileInfo = [
-    { gameWon: 1, gameLost: gameswon1, name: "שחקן1", reputation: 10 },
-    { gameWon: 2, gameLost: gameswon2, name: "שחקן2", reputation: 10 }
+    { gameWon: 0, gameLost: 0, name: "שחקן1", reputation: 10 },
+    { gameWon: 0, gameLost: 0, name: "שחקן2", reputation: 10 }
   ];
 
   // Load from localStorage or use default
