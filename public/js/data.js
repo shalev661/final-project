@@ -1,10 +1,12 @@
 
 let players = JSON.parse(localStorage.getItem("players")) || [
 
+ { id: 0, name: "0", password: 0, reputation: 2 },
+ { id: 1, name: "0", password: 0, reputation: 10 }
 ];
 
-localStorage.removeItem("UserInfo")
 
+console.log(players)
 
 let inputarea = document.getElementById("inputarea");
 let inputarea1 = document.getElementById("inputarea1");

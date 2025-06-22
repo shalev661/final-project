@@ -18,7 +18,7 @@ body {
   }
 
 
-  .header{
+  .headerplace{
     display: flex
     ;
         justify-content: space-between;
@@ -42,7 +42,14 @@ body {
   }
   
 a{
-  color: #efe037;
+      display: inline-block;
+    background-color: #03a9f4;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
 }
   
 
