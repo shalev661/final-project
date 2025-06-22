@@ -1,10 +1,12 @@
 
 let players = JSON.parse(localStorage.getItem("players")) || [
-  { id: 1, name: "שחקן1", password: "password1", reputation: 10,gameWon: gameswon1,gameLost: gameslost1 },
-  { id: 2, name: "שחקן2", password: "password2", reputation: 0,gameWon: gameswon1,gameLost: gameslost1 },
-  { id: 3, name: "שחקן3", password: "password3", reputation: 10 },
 
+ { id: 0, name: "0", password: 0, reputation: 10 },
+ { id: 1, name: "0", password: 0, reputation: 10 }
 ];
+
+
+console.log(players)
 
 let inputarea = document.getElementById("inputarea");
 let inputarea1 = document.getElementById("inputarea1");
@@ -33,7 +35,7 @@ function AddToPlayerBase(username, password1) {
 
   const IdUser = players.length ? players[players.length - 1].id + 1 : 1;
 
-  const newPlayer = { id: IdUser, name: username, password: password1, reputation: 10, gameLost: gameslost1};
+  const newPlayer = { id: IdUser, name: username, password: password1, reputation: 10, gameWon: 0, gameLost: 0};
   players.push(newPlayer);
 
 
@@ -57,5 +59,7 @@ AddToPlayerBaseBtn.addEventListener("click", () => AddToPlayerBase(username, pas
 
 
 const example =JSON.parse( localStorage.getItem("UserInfo"));
+
+console.log(example)
 
 
