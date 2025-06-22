@@ -12,9 +12,14 @@
   background-color: gray;
   border: black 3px solid;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
       margin-left: 347px;
     margin-top: -33px;
+=======
+  margin-left:358px;
+  margin-top: -38px;
+>>>>>>> Stashed changes
 =======
   margin-left:358px;
   margin-top: -38px;
@@ -63,6 +68,9 @@
   position: relative;
   left: 48px;
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
 
@@ -74,10 +82,13 @@
 
   background-color: rgb(72, 77, 146);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   height: 57px;
   position: relative;
 left: 4px;
 =======
+=======
+>>>>>>> Stashed changes
   height: 92px;
 
 >>>>>>> Stashed changes
@@ -99,13 +110,20 @@ left: 4px;
     background-color: red;
   }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  
 =======
+=======
+>>>>>>> Stashed changes
   .navbar-brand{
 display: inline;
 
   }
   .moves-panel{
    
+<<<<<<< Updated upstream
+  }
+>>>>>>> Stashed changes
+=======
   }
 >>>>>>> Stashed changes
