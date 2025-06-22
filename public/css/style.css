@@ -68,7 +68,10 @@ a{
    font-size: 22px;
    font-family: unset;
    left: 8px;
-
+  text-indent: 50px;
+    text-align: center;
+  text-align: justify;
+  letter-spacing: 3px;
    
 }
 
