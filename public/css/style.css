@@ -18,7 +18,7 @@ body {
   }
 
 
-  .header{
+  .headerplace{
     display: flex
     ;
         justify-content: space-between;
