@@ -300,49 +300,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// =================== CHAT SYSTEM ===================
-let selectedPlayerName = "Player 1";
-
-document.addEventListener("DOMContentLoaded", () => {
-  const playerSelect = document.getElementById("playerSelect");
-  const chatInput = document.getElementById("chatInput");
-  const sendBtn = document.getElementById("sendBtn");
-  const messagesDiv = document.getElementById("messagesDiv");
-
-  // עידכון השחקן שנבחר
-  if (playerSelect) {
-    selectedPlayerName = playerSelect.value;
-    playerSelect.addEventListener("change", function (e) {
-      selectedPlayerName = e.target.value;
-    });
-  }
-
-  // לחיצה על כפתור שליחה
-  sendBtn.addEventListener("click", sendMessage);
-
-  // שליחה עם Enter
-  chatInput.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
-      sendMessage();
-    }
-  });
-
-  function sendMessage() {
-    const msg = chatInput.value.trim();
-    if (msg !== "") {
-      const messageElement = document.createElement("div");
-      messageElement.textContent = `${selectedPlayerName}: ${msg}`;
-
-      // צבע שונה לפי שחקן
-      messageElement.style.color = selectedPlayerName === "Player 1" ? "green" : "blue";
-      messageElement.style.fontFamily = "Arial";
-      messageElement.style.marginBottom = "5px";
-
-      messagesDiv.appendChild(messageElement);
-      chatInput.value = "";
-      messagesDiv.scrollTop = messagesDiv.scrollHeight;
-    }
-  }
-});
 
 
