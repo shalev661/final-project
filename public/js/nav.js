@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (loggedIn === "true") {
       nav.innerHTML = `
         <a href="#">בית</a>
-        <a href=".//game.html">🎮המשחק</a>
+        <a href=".//game.html" >🎮המשחק </a>
         <a href="/public/profile.html">פרופיל שחקן</a>
         <a href="/public/contactandhelp.html">צור קשר</a>
         <a href="./about.html">אודות</a>
@@ -24,11 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Handle the play button
   const playButton = document.getElementById("PlayButton");
   if (playButton) {
     playButton.addEventListener("click", (e) => {
-      e.preventDefault(); // Prevent default link behavior
+      e.preventDefault();
       if (loggedIn === "true") {
         window.location.href = "/public/game.html";
       } else {
@@ -36,4 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-});
+}); 
+
+function logoutUser() {
+  localStorage.setItem("loggedIn", "false");
+  localStorage.removeItem("currentUser");
+  localStorage.removeItem("CurrentlyloggedIn"); 
+  window.location.href = "./index.html";
+}
