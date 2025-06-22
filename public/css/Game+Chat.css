@@ -11,8 +11,9 @@
   width: 1052px;
   background-color: gray;
   border: black 3px solid;
-  margin-left: 300px;
-  margin-top: -59px;
+
+      margin-left: 347px;
+    margin-top: -33px;
 
 }
 
@@ -48,8 +49,11 @@
 #chat {
   margin-top: 20px;
   width: 285px;
-  height: 35px;
+    height: 32px;
+    position: relative;
+    left: 32px;
 }
+
 
 .header {
   display: flex;
@@ -57,8 +61,9 @@
   align-items: first baseline;
 
   background-color: rgb(72, 77, 146);
-  height: 155px;
-
+  height: 57px;
+  position: relative;
+left: 4px;
 }
 
 .nav {
@@ -76,3 +81,4 @@
   .report-btn{
     background-color: red;
   }
+ 
