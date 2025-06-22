@@ -26,3 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   
+function logoutUser() {
+  localStorage.setItem("loggedIn", "false");
+  localStorage.removeItem("currentUser");
+  localStorage.removeItem("CurrentlyloggedIn"); 
+  window.location.href = "./index.html";
+}
