@@ -1,6 +1,12 @@
 function header() {
   document.addEventListener("DOMContentLoaded", () => {
-    const headerPlace = document.getElementById("headerplace")
+    const headerPlace = document.getElementById("headerplace");
+    const img = document.createElement("img")
+    img.src = "./img/img-header.jpg"
+    img.alt = "..."
+        img.style.width = "150px";
+    img.style.height = "150px";
+    img2.appendChild(img)
     const img2 = document.getElementById("img-get")
     headerPlace.innerHTML = `
     <a id="title2" href="../public/index.html">VerbaGuard</a><br><br><br><br>
@@ -13,12 +19,6 @@ function header() {
           <a href="../public/Contactandhelp.html">צור קשר</a>
           </div>
         `;
-    const img = document.createElement("img")
-    img.src = "../final-project2/public/img/img-header.jpg"
-    img.alt = "..."
-    img.style.width = "150px";
-    img.style.height = "150px";
-    img2.appendChild(img)
   })
 }
 

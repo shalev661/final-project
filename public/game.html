@@ -48,25 +48,53 @@
       <div class="moves-panel">
         <button id="toggleMovesBtn">Show Moves</button>
 
-
-
-
-        <!-- this button so there is no error, there is no other way to solve this because 2 html use the same js-->
-         <button id="cnfrmbtn"></button>
+        <!-- dummy buttons -->
+        <button id="cnfrmbtn"></button>
         <button id="AddToPlayerBaseBtn">Sign Up</button>
-        <!--if you are the person who needs to check the code, do not check this👍👍👍-->
 
-
-        <!-- Moves Box (hidden by default) -->
+        <!-- Moves Box -->
         <div class="movesBox" id="movesBox" style="display: none;">
-          <h1 class="title">Player 1: WASD | G: כדור | H: מכה מיוחדת[כדור גדול]</h1>
-          <h1>Player 2: ← ↑ → ↓ | L: כדור | K: [מכה מיוחדת[מהירות יריה מוגברת</h1>
+          <h1 class="title">Player 1: WASD | G: כדור | H: מכה מיוחדת [כדור גדול]</h1>
+          <h1>Player 2: ← ↑ → ↓ | L: כדור | K: מכה מיוחדת [מהירות יריה מוגברת]</h1>
         </div>
       </div>
     </div>
   </div>
-  <br><br><br>  <br><br><br>  <br><br><br>
-<div dir="rtl" id="footerplace"></div>
+
+  <!-- Chat Script -->
+  <script>
+    const messagesDiv = document.getElementById("messagesDiv");
+    const chatInput = document.getElementById("chatInput");
+    const sendBtn = document.getElementById("sendBtn");
+    const playerSelect = document.getElementById("playerSelect");
+
+    sendBtn.addEventListener("click", () => {
+      const text = chatInput.value.trim();
+      if (!text) return;
+
+      const playerName = playerSelect.value;
+
+      const messageDiv = document.createElement("div");
+      messageDiv.className = "message";
+      messageDiv.innerHTML = `
+        <strong>${playerName}:</strong> ${text}
+        <button class="report-btn">דווח</button>
+      `;
+
+      const reportBtn = messageDiv.querySelector(".report-btn");
+      reportBtn.addEventListener("click", () => {
+        const confirmed = confirm("האם אתה בטוח שברצונך לדווח?");
+        if (confirmed) {
+          window.location.href = "report.html";
+        }
+      });
+
+      messagesDiv.appendChild(messageDiv);
+      chatInput.value = "";
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    });
+  </script>
+
   <!-- Scripts -->
   <script src="/public/js/nav.js"></script>
   <script src="/public/js/data.js"></script>
@@ -76,8 +104,5 @@
   <script src="/public/js/footer.js"></script>
   <script src="/public/js/header.js"></script>
 
-
-
 </body>
-
 </html>

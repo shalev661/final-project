@@ -1,7 +1,7 @@
 
 let players = JSON.parse(localStorage.getItem("players")) || [
 
- { id: 0, name: "0", password: 0, reputation: 10 },
+ { id: 0, name: "0", password: 0, reputation: 2 },
  { id: 1, name: "0", password: 0, reputation: 10 }
 ];
 
@@ -32,28 +32,28 @@ function Registration() {
 cnfrmbtn.addEventListener("click", Registration);
 
 function AddToPlayerBase(username, password1) {
-
   const IdUser = players.length ? players[players.length - 1].id + 1 : 1;
 
-  const newPlayer = { id: IdUser, name: username, password: password1, reputation: 10, gameWon: 0, gameLost: 0};
+  const newPlayer = {
+    id: IdUser, name: username, password: password1, reputation: 10, gameWon: 0, gameLost: 0 };
+
   players.push(newPlayer);
 
-
   localStorage.setItem("players", JSON.stringify(players));
-
-
-  localStorage.setItem("UserInfo", JSON.stringify(newPlayer));
+  localStorage.setItem("loggedIn", "true");
+  localStorage.setItem("currentUser", JSON.stringify(newPlayer));
 
   console.log("New player added:", newPlayer);
   console.log("All players:", players);
 
-
   AddToPlayerBaseBtn.disabled = true;
-
 
   inputarea.value = "";
   inputarea1.value = "";
+
+  window.location.href = "./index.html";
 }
+
 
 AddToPlayerBaseBtn.addEventListener("click", () => AddToPlayerBase(username, password1));
 

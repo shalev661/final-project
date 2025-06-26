@@ -31,9 +31,6 @@ function AddToPlayerBase(username, password1) {
 
   localStorage.setItem("players", JSON.stringify(players));
 
-
-  localStorage.setItem("UserInfo", JSON.stringify(newPlayer));
-
   console.log("New player added:", newPlayer);
   console.log("All players:", players);
 
@@ -43,6 +40,8 @@ function AddToPlayerBase(username, password1) {
 
   inputarea.value = "";
   inputarea1.value = "";
+
+ window.location.href = "./index.html";
 }
 
 AddToPlayerBaseBtn.addEventListener("click", () => AddToPlayerBase(username, password1));
