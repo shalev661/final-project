@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   let current = JSON.parse(localStorage.getItem("UserInfo"))
-  console.log(current.name)
+  console.log(current.gameWon)
   // Load from localStorage or use default
   let storedData = localStorage.getItem('profileInfo');
   let profileInfo;
