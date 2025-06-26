@@ -31,9 +31,6 @@ function AddToPlayerBase(username, password1) {
 
   localStorage.setItem("players", JSON.stringify(players));
 
-
-  localStorage.setItem("UserInfo", JSON.stringify(newPlayer));
-
   console.log("New player added:", newPlayer);
   console.log("All players:", players);
 
