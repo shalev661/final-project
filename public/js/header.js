@@ -2,7 +2,7 @@ function header() {
   document.addEventListener("DOMContentLoaded", () => {
     const headerPlace = document.getElementById("headerplace");
     const img = document.createElement("img")
-    img.src = "./public/img/img-header.jpg"
+    img.src = "./img/img-header.jpg"
     img.alt = "..."
     const img2 = document.getElementById("img-get")
     img2.appendChild(img)
