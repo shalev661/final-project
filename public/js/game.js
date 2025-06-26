@@ -311,4 +311,38 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-console.log(gameslost1)
+
+// --- משתנה לשחקן הנבחר בצ'אט ---
+const playerSelect = document.getElementById("playerSelect");
+let selectedPlayerName = playerSelect.value;
+
+playerSelect.addEventListener("change", (e) => {
+  selectedPlayerName = e.target.value;
+});
+
+// --- אלמנטים צ'אט ---
+// const sendBtn = document.getElementById("sendBtn");
+const chatInput = document.getElementById("chatInput");
+const messagesDiv = document.getElementById("messagesDiv");
+
+// --- פונקציית שליחת הודעה ---
+function sendMessage() {
+  const msg = chatInput.value.trim();
+  if (msg !== "") {
+    const messageElement = document.createElement("div");
+    messageElement.textContent = `${selectedPlayerName}: ${msg}`;
+    messagesDiv.appendChild(messageElement);
+    chatInput.value = "";
+    messagesDiv.scrollTop = messagesDiv.scrollHeight; // גלילה לתחתית
+  }
+}
+
+// --- מאזינים לשליחה בלחיצה או אנטר ---
+sendBtn.addEventListener("click", sendMessage);
+
+chatInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    sendMessage();
+  }
+});
+
