@@ -31,6 +31,7 @@ a:hover{
 }
 #footer{
 background-color: aqua;
+  text-align: center;
 }
 #a-footer a{
   color: #7703f4;
