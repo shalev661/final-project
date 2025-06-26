@@ -34,7 +34,7 @@ function login(event) {
 
     localStorage.setItem("currentUser", username);
     setTimeout(() => {
-      window.location.href = "./index.html";
+      window.location.href = "/index.html";
     }, 1000);
   } else {
     timesClicked++;
