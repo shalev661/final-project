@@ -50,13 +50,8 @@ function AddToPlayerBase(username, password1) {
   AddToPlayerBaseBtn.disabled = true;
   inputarea.value = "";
   inputarea1.value = "";
-}
 
-const user = JSON.parse(localStorage.getItem("CurrentlyloggedIn"));
-
-if (user) {
-  console.log("User name:", user.name);
-  console.log("Reputation:", user.reputation);
+  window.location.href = "/index.html";
 }
 
 AddToPlayerBaseBtn.addEventListener("click", () => AddToPlayerBase(username, password1));
