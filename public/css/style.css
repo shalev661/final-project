@@ -85,7 +85,7 @@ a{
 #playbutton, #info {
   display: inline-block;
   background-color: #03a9f4; 
-  color: white;
+  color: rgb(14, 4, 4);
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
