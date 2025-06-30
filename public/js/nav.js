@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.getElementById("main-nav");
   const loggedIn = localStorage.getItem("loggedIn");
 
+
   if (nav) {
     if (loggedIn === "true") {
       nav.innerHTML = `
