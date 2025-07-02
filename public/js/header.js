@@ -4,13 +4,16 @@ function header() {
   document.addEventListener("DOMContentLoaded", () => {
     const headerPlace = document.getElementById("headerplace");
     const header = document.createElement("header");
+    header.style.direction = "rtl"
+    header.style.display = "flex";
+    header.style.justifyContent = "space-evenly";
+    header.style.alignItems = "center";
 
     const logo = document.createElement("img");
-    logo.src = (window.location.pathname === "/" || window.location.pathname.endsWith("index.html")) ? "./public/img/img-header.jpg" : "./img/img-header.jpg";
-    logo.src = "./img/img-header.jpg";
+    logo.src = ( window.location.href.endsWith("index.html")) ? "./public/img/img-header.jpg" : "./img/img-header.jpg";
     logo.alt = "Logo";
-    logo.style.width = "150px";
-    logo.style.height = "150px";
+    logo.style.width = "182px";
+    logo.style.height = "160px";
 
     const navContainer = document.createElement("nav");
     navContainer.id = "main-nav";
@@ -33,21 +36,21 @@ function createNav() {
 
   if (loggedIn === "true") {
     nav.innerHTML = `
-      <a href="/index.html">בית</a>
-      <a href="/public/game.html">🎮המשחק</a>
-      <a href="/public/profile.html">פרופיל שחקן</a>
-      <a href="/public/contactandhelp.html">צור קשר</a>
-      <a href="/public/about.html">אודות</a>
-      <a href="#" id="logout-link">התנתק</a>
+      <a class= "nav-a" href="/index.html">בית</a>
+       <a class= "nav-a" href="/public/about.html">אודות</a>
+      <a class = "game-btn nav-a" href="/public/game.html">🎮המשחק</a>
+      <a  class= "nav-a" href="/public/contactandhelp.html">צור קשר</a>
+      <a class= "nav-a" href="/public/profile.html">פרופיל שחקן</a>
+      <a class= "nav-a" href="#" id="logout-link">התנתק</a>
     `;
   } else {
     nav.innerHTML = `
-      <a href="/index.html">בית</a>
-      <a href="/public/game.html">🎮המשחק</a>
-      <a href="/public/about.html">אודות</a>
-      <a href="/public/Log-in_Page.html">התחברות</a>
-      <a href="/public/Sign-Up_Page.html">הרשמה</a>
-      <a href="/public/contactandhelp.html">צור קשר</a>
+      <a class= "nav-a" href="/index.html">בית</a>
+       <a class= "nav-a" href="/public/about.html">אודות</a>
+      <a class= "nav-a" href="/public/game.html">🎮המשחק</a>
+      <a class= "nav-a" href="/public/contactandhelp.html">צור קשר</a>
+        <a class= "nav-a" href="/public/Sign-Up_Page.html">הרשמה</a>
+      <a class= "nav-a" href="/public/Log-in_Page.html">התחברות</a>
     `;
   }
 
@@ -73,6 +76,7 @@ function createNav() {
     });
   }
 }
+
 
 function logoutUser() {
   localStorage.setItem("loggedIn", "false");

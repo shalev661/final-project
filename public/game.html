@@ -5,22 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <base href="./" />
-  <link rel="stylesheet" href="/public/css/Game+Chat.css">
-  <link rel="stylesheet" href="/public/css/nav.css">
-  <link rel="stylesheet" href="/public/css/header+footer.css">
+  <link rel="stylesheet" href="./css/Game+Chat.css">
+  <link rel="stylesheet" href="./css/header+footer.css">
   <title>game & chat</title>
 </head>
 
-  <header class="header">
-    <nav id="main-nav"></nav>
-
-
-  <nav class="custom-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="../index.html"> VerbaGuard</a>
-
-        <nav id="main-nav"> </nav>
-  </header>
+  <div id="headerplace"></div>
 
   <!-- Chat -->
   <div id="chat">
@@ -68,51 +58,21 @@
       </div>
     </div>
   </div>
+  <div id="footerplace"></div>
 
-  <!-- Chat Script -->
-  <script>
-    const messagesDiv = document.getElementById("messagesDiv");
-    const chatInput = document.getElementById("chatInput");
-    const sendBtn = document.getElementById("sendBtn");
-    const playerSelect = document.getElementById("playerSelect");
+ 
+<div id="footerplace"></div>
 
-    sendBtn.addEventListener("click", () => {
-      const text = chatInput.value.trim();
-      if (!text) return;
 
-      const playerName = playerSelect.value;
+  <script src="./js/header.js"></script>
+    <script src="./js/footer.js"></script>
+  <script src="./js/chat.js"></script>
+  <script src="./js/data.js"></script>
+  <script src="./js/gptMock.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/game.js"></script>
 
-      const messageDiv = document.createElement("div");
-      messageDiv.className = "message";
-      messageDiv.innerHTML = `
-        <strong>${playerName}:</strong> ${text}
-        <button class="report-btn">דווח</button>
-      `;
-
-      const reportBtn = messageDiv.querySelector(".report-btn");
-      reportBtn.addEventListener("click", () => {
-        const confirmed = confirm("האם אתה בטוח שברצונך לדווח?");
-        if (confirmed) {
-          window.location.href = "report.html";
-        }
-      });
-
-      messagesDiv.appendChild(messageDiv);
-      chatInput.value = "";
-      messagesDiv.scrollTop = messagesDiv.scrollHeight;
-    });
-  </script>
-<br><br><br>
-<div id="footerplace" dir="rtl"></div>
-
-  <!-- Scripts -->
-  <script src="/public/js/header.js"></script>
-  <script src="/public/js/nav.js"></script>
-  <script src="/public/js/data.js"></script>
-  <script src="/public/js/gptMock.js"></script>
-  <script src="/public/js/script.js"></script>
-  <script src="/public/js/game.js"></script>
-  <script src="/public/js/footer.js"></script>
+ 
 
 </body>
 </html>
