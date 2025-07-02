@@ -2,7 +2,7 @@ function header() {
   document.addEventListener("DOMContentLoaded", () => {
     const headerPlace = document.getElementById("headerplace");
         const img = document.getElementById("img-get");
-    img.src = "./public/img/img-header.jpg"
+    img.src = "./img/img-header.jpg"
     img.alt = "..."
         img.style.width = "150px";
     img.style.height = "150px";
