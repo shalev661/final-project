@@ -1,53 +1,59 @@
-document.addEventListener('DOMContentLoaded', () => {
+
   
-  // Default profile info using your existing variables
-  let defaultProfileInfo = [
-    { gameWon: 0, gameLost: 0, name: "שחקן1", reputation: 10 },
-    { gameWon: 0, gameLost: 0, name: "שחקן2", reputation: 10 }
-  ];
+document.addEventListener("DOMContentLoaded", () => {
+  const current = JSON.parse(localStorage.getItem("CurrentlyloggedIn"));
+  const  stats = document.getElementById("playerForm1")
+  const  restrictions = document.getElementById("playerForm2")
+const  playerRep = document.getElementById("reputation")
+ 
 
 
-  let current = JSON.parse(localStorage.getItem("UserInfo"))
-  console.log(current.gameWon)
-  // Load from localStorage or use default
-  let storedData = localStorage.getItem('profileInfo');
-  let profileInfo;
-  
-  if (storedData) {
-    try {
-      profileInfo = JSON.parse(storedData);
-    } catch (e) {
-      // If parsing fails, use default
-      profileInfo = defaultProfileInfo;
-    }
-  } else {
-    // No stored data, use default and save it
-    profileInfo = defaultProfileInfo;
-    localStorage.setItem('profileInfo', JSON.stringify(profileInfo));
-  }
-
-  // Show greeting for first player
   const greetingDiv = document.getElementById('greeting');
-  if (profileInfo && profileInfo.length > 0) {
+
+  if (!current) {
+    // Not logged in – redirect or show message
+    window.location.href = "./Log-in_Page.html";
+    return;
+  }
+  else{
+
     greetingDiv.innerHTML = `שלום ${current.name}`;
-    playerForm1.innerHTML=`נצחונות: ${profileInfo[0].gameWon} <br> הפסדים: ${profileInfo[0].gameLost}`
-    reputation.innerHTML=`מוניטין: ${profileInfo.reputation}`
+    stats.innerHTML=`נצחונות: ${current.gameWon} <br> הפסדים: ${current.gameLost}`
+   playerRep.innerHTML=`מוניטין: ${current.reputation}`
+
+const num = 2;
+
+  if (num <= 2 ){
+    restrictions.innerHTML = `    20%   חיים   <span class= "resX">X</span>   <br> 
+     10 שניות המתנה למכה מיוחדת  <span class= "resX">X</span>   <br> 
+      גובה ורוחב גוף גדולים פי 9   <span class= "resX">X</span>   <br> 
+
+    `
+  }
+  else if (current.reputation <= 4 ){
+     restrictions.innerHTML = `    40%   חיים   <span class= "resX">X</span>   <br> 
+     9 שניות המתנה למכה מיוחדת  <span class= "resX">X</span>   <br> 
+      גובה ורוחב גוף גדולים פי 1.75   <span class= "resX">X</span>   <br> 
+
+    `
+  }
+  else if (current.reputation <= 6 ){
+      restrictions.innerHTML = `    20%   חיים   <span class= "resX">X</span>   <br> 
+     8 שניות המתנה למכה מיוחדת  <span class= "resX">X</span>   <br> 
+      גובה ורוחב גוף גדולים פי 1.5   <span class= "resX">X</span>   <br> 
+
+    `
+  }
+  else if (current.reputation <= 8 ){
+      restrictions.innerHTML = `    20%   חיים   <span class= "resX">X</span>   <br> 
+     6 שניות המתנה למכה מיוחדת  <span class= "resX">X</span>   <br> 
+      גובה ורוחב גוף גדולים פי 1.1   <span class= "resX">X</span>   <br> 
+
+    `
+  }
+  
    
   }
-
-  // Show profile info for all players
-  const profileContainer = document.getElementById('profile');
-  if (profileContainer) {
-    profileContainer.style.display = 'block';
-    profileContainer.innerHTML = '';
-
-    // profileInfo.forEach(player => {
-    //   const playerDiv = document.createElement('div');
-    //   playerDiv.innerHTML = `
-    //     <h3>${player.name}</h3>
-    //   <p>יש לך ${player.gameWon} נצחונות, ${player.gameLost} הפסדים, ו- ${player.reputation} נקודות מוניטין.</p>
-    //   `;
-    //   profileContainer.appendChild(playerDiv);
-    // });
-  }
-});
+}
+  
+);
