@@ -8,7 +8,7 @@ footerplace.innerHTML= `
 
 <h1 id="footercopyright">© כל הזכויות שמורות לסטארטאפיסטים שנה א'</h1>
 </div><br><br>
-<a class= "nav-a" href="./index.html">home page</a>
+<a class= "nav-a" href="../index.html">home page</a>
 <a class= "nav-a" href="../public/about.html">about</a>
 <a class= "nav-a" href="../public/Contactandhelp.html">help/contact</a>
 <a class= "nav-a" href="../public/Sign-Up_Page.html">sign up</a>

@@ -11,7 +11,7 @@ const  playerRep = document.getElementById("reputation")
   const greetingDiv = document.getElementById('greeting');
 
   if (!current) {
-    // Not logged in – redirect or show message
+   
     window.location.href = "./Log-in_Page.html";
     return;
   }
