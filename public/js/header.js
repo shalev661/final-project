@@ -36,7 +36,7 @@ function createNav() {
 
   if (loggedIn === "true") {
     nav.innerHTML = `
-      <a class= "nav-a" href="/index.html">בית</a>
+      <a class= "nav-a" href="/public/index.html">בית</a>
        <a class= "nav-a" href="/public/about.html">אודות</a>
       <a class = "game-btn nav-a" href="/public/game.html">🎮המשחק</a>
       <a  class= "nav-a" href="/public/contactandhelp.html">צור קשר</a>
@@ -45,7 +45,7 @@ function createNav() {
     `;
   } else {
     nav.innerHTML = `
-      <a class= "nav-a" href="/index.html">בית</a>
+      <a class= "nav-a" href="/public/index.html">בית</a>
        <a class= "nav-a" href="/public/about.html">אודות</a>
       <a class= "nav-a" href="/public/game.html">🎮המשחק</a>
       <a class= "nav-a" href="/public/contactandhelp.html">צור קשר</a>
@@ -82,6 +82,6 @@ function logoutUser() {
   localStorage.setItem("loggedIn", "false");
   localStorage.removeItem("currentUser");
   localStorage.removeItem("CurrentlyloggedIn");
-  window.location.href = "/index.html";
+  window.location.href = "/public/index.html";
 }
 

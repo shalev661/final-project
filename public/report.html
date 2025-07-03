@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,49 +10,41 @@
     <link rel="stylesheet" href="./css/header+footer.css">
     <title>טופס דיווח</title>
 </head>
+
 <body>
     <div id="headerplace"></div>
     <main id="max-width600pxreportpage">
-    <h1 class="title">טופס דיווח</h1>
-    <!-- <nav id="main-nav"> </nav> -->
-    <p>שם מלא:</p>
-<input type="text">
-<p>מהי סוג ההפרה:</p><br>
+        <h1 class="title">טופס דיווח</h1>
+        <h2 id="reported-text"></h2>
 
-שפה פוגענית / קללות <input type="radio" name="inputradio" > 
-
- בריונות / איומים <input type="radio" name="inputradio">
-
- ספאם / פרסום <input type="radio" name="inputradio">
-
- תוכן אלים או בוטה <input type="radio" name="inputradio">
-
- התחזות או הונאה <input type="radio" name="inputradio">
-
-אחר: <input type="radio" name="inputradio">
-<br><br>
-<input type="text" placeholder="פרט כאן" maxlength="50">
-<p>פירוט המקרה:</p>
-<input type="text" placeholder="(לא חובה)" maxlength="200">
+        <br><br>
+       <form id="report-form">
+  <label for="reason">מה הסיבה לדיווח?</label>
+  <input type="text" id="reason" required>
+  <button type="submit">שלח דיווח</button>
+</form>
+<div id="result"></div>
+    </main>
 
 
 
 
-<p>האם אתה רוצה שנשיב לך בנוגע לדיווח?</p>
-    <p>הזן אמייל כדי שנוכל ליצור איתך קשר:</p>
-<input type="text" placeholder="לא חובה">
-<p>הזן מספר טלפון:</p>
-    <input type="text" placeholder="לא חובה">
-    <br><br><br>
-    <div id="flex-center_button_report">
-    <button class="buttonreport">דווח</button>
-    </div>
- </main>
-     <br>
-<div id="footerplace"></div>
 
+
+
+    <br>
+    <div id="footerplace"></div>
+
+
+
+
+
+
+
+    <script src="./js/report.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/footer.js"></script>
 
 </body>
+
 </html>
