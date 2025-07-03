@@ -66,6 +66,6 @@
   inputarea1.value = "";
 
  window.location.href = "../index.html";
-}
+
 
 AddToPlayerBaseBtn.addEventListener("click", () => AddToPlayerBase(username, password1));

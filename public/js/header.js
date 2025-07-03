@@ -63,7 +63,7 @@ function createNav() {
     });
   }
 
-  // Handle game button (if exists)
+  
   const playButton = document.getElementById("PlayButton");
   if (playButton) {
     playButton.addEventListener("click", (e) => {
@@ -82,6 +82,6 @@ function logoutUser() {
   localStorage.setItem("loggedIn", "false");
   localStorage.removeItem("currentUser");
   localStorage.removeItem("CurrentlyloggedIn");
-  window.location.href = "/index.html";
+  window.location.href = "/public/index.html";
 }
 
