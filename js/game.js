@@ -46,7 +46,7 @@ function updateGameStats(winnerIndex, loserIndex) {
   localStorage.setItem("profileInfo", JSON.stringify(profileInfo));
 }
 
-// ✅ Get current logged in player from localStorage
+
 const currentPlayer = JSON.parse(localStorage.getItem("CurrentlyloggedIn"));
 
 if (currentPlayer && currentPlayer.reputation !== undefined) {
